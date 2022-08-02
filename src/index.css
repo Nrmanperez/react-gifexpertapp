@@ -3,19 +3,40 @@
 }
 
 body {
-    padding: 6rem;
-    background-color: #ff9c3361;
+    padding: 1rem;
+    background: rgb(66,13,9);
+background: linear-gradient(186deg, rgba(66,13,9,0.7063200280112045) 100%, rgba(48,48,60,1) 100%, rgba(0,0,0,1) 100%);
 }
 
 h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: .5rem;
     text-align: center;
 }
 
 input {
     color: gray;
     font-size: 1.3rem;
-    width: 100%;
+    width: 20%;
+    min-width: 150px;
     border-radius: 10px;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  color: gray;
 }
 
 .card-grid {
@@ -24,7 +45,25 @@ input {
     flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 968px) {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+@media (min-width: 1200px) {
     .card-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -36,6 +75,7 @@ input {
 .card {
     width: 100%;
     height: 240px;
+    min-width: 150px;
     align-content: center;
     border: 1px solid grey;
     border-radius: 6px;

@@ -24,8 +24,11 @@ const AddCategory = ({setCategories}) => {
   return (
     
     <form onSubmit={ handleSubmit }>
+      <label htmlFor="gif">Ingrese Gif a buscar</label>
       <input 
+        id="gif"
         type="text"
+        placeholder="Ingrese nombre del gif"
         value={ inputValue } 
         onChange={ handleInputChange }
       />
